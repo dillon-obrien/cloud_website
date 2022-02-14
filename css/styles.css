@@ -892,4 +892,8 @@ a {
   .footer__heading {
     font-size: 1.6rem;
   }
+
+  .footer__toggler {
+    display: none;
+  }
 }
