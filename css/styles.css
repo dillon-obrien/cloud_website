@@ -388,7 +388,7 @@ a {
   transform: scale(1.05);
 }
 
-.plan--poular:hover {
+.plan--popular:hover {
   transform: scale(1.15);
 }
 
@@ -599,11 +599,14 @@ a {
   max-height: 100vh;
   opacity: 1;
 }
-
 /* Blocks */
 .block {
   --padding-vertical: 6rem;
   padding: var(--padding-vertical) 2rem;
+}
+
+.block__header {
+  text-align: center;
 }
 
 .block__heading {
@@ -621,26 +624,20 @@ a {
 
 .block--skewed-right {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 80%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
 }
 
 .block--skewed-left {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0 0%, 100% 0, 100% 80%, 0 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
 }
-
-.block__header {
-  text-align: center;
-}
-
-/* container */
 
 .container {
   max-width: 1140px;
   margin: 0 auto;
 }
 
-/* Navbar */
+/* Navigation Bar */
 .nav {
   background: #000;
   display: flex;
@@ -689,6 +686,7 @@ a {
   .nav__toggler {
     display: none;
   }
+
   .nav__list {
     width: auto;
     display: flex;
@@ -696,6 +694,7 @@ a {
     max-height: 100%;
     opacity: 1;
   }
+
   .nav__item {
     border: 0;
   }
@@ -703,8 +702,9 @@ a {
 
 /* Hero */
 .hero {
-  clip-path: polygon(0 0%, 100% 0, 100% 90%, 0 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
+
 .hero__tagline {
   font-size: 2rem;
   color: #b9c3cf;
@@ -720,6 +720,7 @@ a {
   .hero {
     padding-top: 0;
   }
+
   .hero__content {
     text-align: left;
     align-self: center;
@@ -750,7 +751,6 @@ a {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
 }
-
 /* Plans Block */
 .block-plans .grid {
   gap: 8rem 4rem;
@@ -759,4 +759,28 @@ a {
 .block-plans .card {
   max-width: 500px;
   margin: 0 auto;
+}
+
+/* Features */
+.feature {
+  gap: 4rem 2rem;
+  margin: 12rem 0;
+}
+
+.feature:first-of-type {
+  margin-top: 6rem;
+}
+
+.feature__heading {
+  margin: 1rem 0;
+}
+
+.feature__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__content {
+    order: 2;
+  }
 }
